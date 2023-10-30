@@ -1,0 +1,18 @@
+exp-name: example
+output-dir: output
+input-file-list: test_samples.txt
+k: 31
+
+mem-cap-gb: 50
+threads: 10
+
+# Annotate step uses different parallization scheme
+anno-file-chunk: 5
+anno-threads-per-chunk: 4
+
+# BRWT annotation step needs another param.
+brwt-parallel-nodes: 10
+relaxed-brwt-arity: 32
+
+metagraph-bin: /mnt/scratch1/rob/wabi_2023/binaries/metagraph
+disk-swap: tmp #path to swapfile
